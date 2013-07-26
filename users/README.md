@@ -1,3 +1,0 @@
-### users cookbook
-
-Creates users
