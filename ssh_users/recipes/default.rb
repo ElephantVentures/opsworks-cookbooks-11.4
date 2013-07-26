@@ -13,7 +13,7 @@ node[:ssh_users].each do |id, ssh_user|
       rename_user(existing_name, ssh_user[:name])
     end
   else
-    setup_user(ssh_user.update(:uid => id))
+    setup_user(ssh_user.merge(:uid => id))
   end
   set_public_key(ssh_user)
 end
